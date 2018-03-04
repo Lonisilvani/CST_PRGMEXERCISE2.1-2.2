@@ -1,0 +1,52 @@
+/* Loni Silvani 
+CST 105
+Lisa Hebert 
+03/03/2018
+*/
+
+package FiveDigitInteger;
+
+import java.util.Scanner;
+
+public class FiveDigitInteger {
+
+	public static void main(String[] args) {
+		
+		//Build list of variables that will be used
+                //System.in is the system input
+		Scanner userInput = new Scanner(System.in);
+		int fiveDigitNumber;
+		int sumOfFiveDigits;
+		int digit1;
+		int digit2;
+		int digit3;
+		int digit4;
+		int digit5;
+		
+		/*Here you will display the message asking the user to input
+                the numbers
+                */ 
+		System.out.print("Enter a 5 digit number: ");
+		fiveDigitNumber = userInput.nextInt();
+		
+                // Do not forget to use capital letters in the names. 
+                //And the semi-colon at the end of your lines
+		//these Variables used to separate the 5-digit number from the
+                //user
+		digit1 = fiveDigitNumber / 10000;
+		digit2 = (fiveDigitNumber / 1000) % 10;
+		digit3 = (fiveDigitNumber / 100) % 10;
+		digit4 = (fiveDigitNumber / 10) % 10;
+		digit5 = fiveDigitNumber % 10;
+		
+		//The next will be the digits added together
+		sumOfFiveDigits = digit1 + digit2 + digit3 + digit4 + digit5;
+		
+		//Display the message stating the answer 
+		System.out.println("The sum of the five digits " + digit1 + " + "
+				+ digit2 + " + " + digit3 + " + " + digit4 + " + "
+				+ digit5 + " is: " + sumOfFiveDigits);
+		//End of program
+	}
+
+}
